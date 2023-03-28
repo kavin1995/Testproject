@@ -16,9 +16,7 @@ bat 'mvn clean verify'
 	}
 	stage (‘build’) {
 	steps {
-	cucumber buildStatus: 'null', classifications: [[key: '', value: '']], customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, 
-	fileIncludePattern: '**/*.json', jsonReportDirectory: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Test\\target', pendingStepsNumber: -1, reportTitle: 'feature-overview', skippedStepsNumber: -1, sortingMethod: 'NATURAL', undefinedStepsNumber: -1
-	echo 'deploy'	
+	cucumber buildStatus: 'null', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Testpipeline\\target', pendingStepsNumber: -1, reportTitle: 'feature-overview', skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1	
 	}
 	}
 }
