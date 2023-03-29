@@ -10,7 +10,7 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(dryRun = false,
 		features ="src/test/resources/Features",
 		glue= {"org.stepdefinitions"},
-		tags="@tag33",
+		//tags="@tag33",
 			plugin = {"json:target/cucumber.json"}
 
 		)
