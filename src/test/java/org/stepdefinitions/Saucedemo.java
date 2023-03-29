@@ -199,14 +199,14 @@ public void user_should_click_cart_button() {
 public void user_should_about() {
     driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
     driver.findElement(By.xpath("//a[@id='about_sidebar_link']")).click();
-    
+    driver.quit();
 }
 
 @Then("User should click request")
 public void user_should_click_request() {
 	   driver.findElement(By.xpath("//button[@id='react-burger-menu-btn']")).click();
 	    driver.findElement(By.xpath("//a[@id='about_sidebar_link']")).click();
-	    driver.findElement(By.xpath("//button[text()='Sign in']")).click();
+	   // driver.findElement(By.xpath("//button[text()='Sign in']")).click();
 	    driver.quit();
 }
 

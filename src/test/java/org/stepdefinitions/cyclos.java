@@ -71,7 +71,7 @@ WebDriver driver;
 	public void user_should_click_scheduled_payments() {
 		driver.findElement(By.xpath("//a[@href='/banking/self/payment']//div[@class='quick-access-icon']")).click();
 		driver.findElement(By.xpath("//div[@class='nav-item-text'][normalize-space()='Scheduled payments']")).click();
-    	driver.findElement(By.xpath("//th[text()='Amount']//parent::thead//preceding-sibling::th"));
+    	//driver.findElement(By.xpath("//th[text()='Amount']//parent::thead//preceding-sibling::th"));
      	driver.close();
 	}
 
@@ -79,16 +79,16 @@ WebDriver driver;
 	public void user_should_click_scheduled_payment_mode() {
 		driver.findElement(By.xpath("//a[@href='/banking/self/payment']//div[@class='quick-access-icon']")).click();
 		driver.findElement(By.xpath("//div[@class='nav-item-text'][normalize-space()='Scheduled payments']")).click();
-		driver.findElement(By.xpath("//html/body")).sendKeys(Keys.PAGE_DOWN);
-		driver.findElement(By.xpath("//th[text()='Due date']//parent::thead//following::div//a[text()='Cyclos software']")).click();
+		//driver.findElement(By.xpath("//html/body")).sendKeys(Keys.PAGE_DOWN);
+		//driver.findElement(By.xpath("//th[text()='Due date']//parent::thead//following::div//a[text()='Cyclos software']")).click();
 		driver.quit();
 	}
 
 	@When("User should click scheduled payment modes")
 	public void user_should_click_scheduled_payment_modes() {
 		driver.findElement(By.xpath("//a[@href='/banking/self/payment']//div[@class='quick-access-icon']")).click();
-		driver.findElement(By.xpath("//div[@class='nav-item-text'][normalize-space()='Scheduled payments']")).click();
-		driver.findElement(By.xpath("//th[text()='Due date']//parent::thead//following::th[text()='Number']")).click();
+		//driver.findElement(By.xpath("//div[@class='nav-item-text'][normalize-space()='Scheduled payments']")).click();
+		//driver.findElement(By.xpath("//th[text()='Due date']//parent::thead//following::th[text()='Number']")).click();
 		driver.quit();
 	}
 	

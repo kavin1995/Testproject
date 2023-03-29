@@ -152,7 +152,7 @@ Examples:
 |demo|1234|
 
 
-@cyclos55
+@cyclos3
 Scenario Outline: verify the scheduled payments
 
 Given User should lanch the url

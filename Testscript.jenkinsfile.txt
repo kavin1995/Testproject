@@ -1,0 +1,30 @@
+pipeline {
+	agent any 
+	stages {
+stage('checkout'){
+steps{
+checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '7599c551-6684-4edd-bb9d-f8fac51bb761', url: 'https://github.com/kavin1995/Test.git']])
+}
+}
+stage(‘start’) {
+	steps {
+		
+bat 'mvn clean verify'
+	}
+}
+	stage (Test) {
+	steps {
+	 echo 'test'
+	
+}
+	}
+	stage (‘build’) {
+	steps {
+	cucumber buildStatus: 'null', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1,
+	failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory:
+	'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Testpipeline\\target', pendingStepsNumber: -1, reportTitle: 'feature-overview', skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', trendsLimit: 5, undefinedStepsNumber: -1
+	echo 'deploy'	
+	}
+	}
+}
+}
